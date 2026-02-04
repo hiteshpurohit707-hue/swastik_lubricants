@@ -1,9 +1,16 @@
-/* ROOT VARIABLES (LOGO SIZE CONTROL) */
+/* ===============================
+   ROOT VARIABLES (CHANGE HERE)
+================================ */
 :root{
-  --logo-size-desktop:2300px;   /* 👈 CHANGE LOGO SIZE HERE */
-  --logo-size-mobile:90px;
+  --hero-logo-desktop:170px;
+  --hero-logo-mobile:120px;
+  --nav-logo-height:48px;
+
+  --brand-color:#f37021;
+  --bg-dark:#000;
 }
 
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -16,9 +23,11 @@ body{
   color:#fff;
 }
 
-/* NAVBAR */
+/* ===============================
+   NAVBAR
+================================ */
 .topbar{
-  background:#000;
+  background:var(--bg-dark);
   padding:14px 40px;
   display:flex;
   justify-content:space-between;
@@ -26,7 +35,8 @@ body{
 }
 
 .nav-logo img{
-  height:40px;
+  height:var(--nav-logo-height);
+  width:auto;
 }
 
 nav a{
@@ -36,7 +46,9 @@ nav a{
   font-weight:500;
 }
 
-/* HERO */
+/* ===============================
+   HERO
+================================ */
 .hero{
   position:relative;
   min-height:100vh;
@@ -57,7 +69,7 @@ nav a{
   text-align:center;
 }
 
-/* BRAND BLOCK */
+/* BRAND */
 .hero-brand{
   display:flex;
   flex-direction:column;
@@ -65,20 +77,17 @@ nav a{
   margin-bottom:25px;
 }
 
-/* 🔥 LOGO SIZE CONTROL */
 .hero-logo{
-  width:var(--logo-size-desktop);
-  max-width:45vw;
+  width:var(--hero-logo-desktop);
   height:auto;
   margin-bottom:15px;
 }
 
-/* COMPANY NAME */
 .company-name{
   font-size:46px;
   font-weight:800;
   letter-spacing:2px;
-  color:#f37021;
+  color:var(--brand-color);
   margin-bottom:10px;
 }
 
@@ -87,7 +96,6 @@ nav a{
   color:#ccc;
 }
 
-/* HERO TEXT */
 .hero-desc{
   font-size:17px;
   color:#ddd;
@@ -95,10 +103,7 @@ nav a{
   margin:20px auto 35px;
 }
 
-.hero-buttons{
-  margin-bottom:40px;
-}
-
+/* BUTTONS */
 .btn{
   padding:14px 30px;
   border-radius:4px;
@@ -109,7 +114,7 @@ nav a{
 }
 
 .primary{
-  background:#f37021;
+  background:var(--brand-color);
   color:#fff;
 }
 
@@ -127,7 +132,7 @@ nav a{
 
 .hero-stats strong{
   font-size:28px;
-  color:#f37021;
+  color:var(--brand-color);
 }
 
 .hero-stats span{
@@ -136,16 +141,13 @@ nav a{
   color:#ccc;
 }
 
-/* SECTIONS */
+/* ===============================
+   SECTIONS
+================================ */
 .dark-section{
   padding:80px 20px;
   max-width:1200px;
   margin:auto;
-}
-
-.dark-section h2{
-  text-align:center;
-  margin-bottom:40px;
 }
 
 .grid{
@@ -159,12 +161,12 @@ nav a{
   padding:40px 20px;
   text-align:center;
   border:1px solid #333;
-  transition:all 0.3s ease;
+  transition:0.3s;
 }
 
 .card:hover{
   transform:translateY(-6px);
-  border-color:#f37021;
+  border-color:var(--brand-color);
 }
 
 /* CONTACT */
@@ -202,15 +204,16 @@ footer{
   color:#aaa;
 }
 
-/* MOBILE */
+/* ===============================
+   MOBILE
+================================ */
 @media(max-width:768px){
   .company-name{
     font-size:28px;
-    text-align:center;
   }
 
   .hero-logo{
-    width:var(--logo-size-mobile);
+    width:var(--hero-logo-mobile);
   }
 
   .hero-stats{
@@ -222,5 +225,3 @@ footer{
     grid-template-columns:1fr;
   }
 }
-
-
