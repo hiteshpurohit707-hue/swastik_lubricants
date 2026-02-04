@@ -1,6 +1,6 @@
 /* ROOT VARIABLES (LOGO SIZE CONTROL) */
 :root{
-  --logo-size-desktop:170px;   /* 👈 CHANGE LOGO SIZE HERE */
+  --logo-size-desktop:2300px;   /* 👈 CHANGE LOGO SIZE HERE */
   --logo-size-mobile:90px;
 }
 
@@ -222,4 +222,5 @@ footer{
     grid-template-columns:1fr;
   }
 }
+
 
