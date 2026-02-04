@@ -1,13 +1,13 @@
 /* ===============================
-   ROOT VARIABLES (CHANGE HERE)
+   ROOT VARIABLES
 ================================ */
 :root{
-  --hero-logo-desktop:170px;
-  --hero-logo-mobile:120px;
-  --nav-logo-height:48px;
-
-  --brand-color:#f37021;
+  --brand:#f37021;
   --bg-dark:#000;
+
+  --hero-logo-desktop:210px;
+  --hero-logo-mobile:115px;
+  --nav-logo-height:46px;
 }
 
 /* RESET */
@@ -41,9 +41,10 @@ body{
 
 nav a{
   color:#fff;
-  margin-left:25px;
+  margin-left:28px;
   text-decoration:none;
   font-weight:500;
+  font-size:15px;
 }
 
 /* ===============================
@@ -58,142 +59,90 @@ nav a{
 .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.75);
+  background:rgba(0,0,0,0.78);
 }
 
 .hero-inner{
   position:relative;
   max-width:1100px;
   margin:auto;
-  padding:120px 20px;
+  padding:130px 20px;
   text-align:center;
 }
 
-/* BRAND */
+/* BRAND BLOCK */
 .hero-brand{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  margin-bottom:25px;
+  margin-bottom:28px;
 }
 
 .hero-logo{
   width:var(--hero-logo-desktop);
   height:auto;
-  margin-bottom:15px;
+  margin-bottom:22px;
 }
 
+/* TEXT FIXES */
 .company-name{
-  font-size:46px;
+  font-size:48px;
   font-weight:800;
-  letter-spacing:2px;
-  color:var(--brand-color);
-  margin-bottom:10px;
+  letter-spacing:3px;
+  color:var(--brand);
+  margin-bottom:14px;
 }
 
 .company-tagline{
-  font-size:18px;
+  font-size:19px;
   color:#ccc;
+  line-height:1.6;
 }
 
+/* DESCRIPTION */
 .hero-desc{
-  font-size:17px;
+  font-size:18px;
+  line-height:1.7;
   color:#ddd;
-  max-width:800px;
-  margin:20px auto 35px;
+  max-width:780px;
+  margin:30px auto 40px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn{
-  padding:14px 30px;
+  padding:15px 36px;
   border-radius:4px;
   text-decoration:none;
   font-weight:bold;
   display:inline-block;
-  transition:all 0.3s ease;
+  transition:0.3s;
 }
 
 .primary{
-  background:var(--brand-color);
+  background:var(--brand);
   color:#fff;
 }
 
 .btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.4);
+  box-shadow:0 12px 24px rgba(0,0,0,0.45);
 }
 
 /* STATS */
 .hero-stats{
   display:flex;
   justify-content:center;
-  gap:50px;
+  gap:60px;
+  margin-top:50px;
 }
 
-.hero-stats strong{
-  font-size:28px;
-  color:var(--brand-color);
+.stat strong{
+  font-size:30px;
+  color:var(--brand);
 }
 
-.hero-stats span{
+.stat span{
   display:block;
-  font-size:14px;
+  margin-top:6px;
+  font-size:15px;
   color:#ccc;
-}
-
-/* ===============================
-   SECTIONS
-================================ */
-.dark-section{
-  padding:80px 20px;
-  max-width:1200px;
-  margin:auto;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-}
-
-.card{
-  background:#1c1c1c;
-  padding:40px 20px;
-  text-align:center;
-  border:1px solid #333;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  border-color:var(--brand-color);
-}
-
-/* CONTACT */
-.contact-section{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  padding:80px 20px;
-  max-width:1200px;
-  margin:auto;
-}
-
-.contact-form{
-  background:#fff;
-  color:#000;
-  padding:30px;
-  border-radius:6px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea{
-  padding:12px;
-  border:1px solid #ccc;
 }
 
 /* FOOTER */
@@ -202,26 +151,37 @@ footer{
   padding:20px;
   text-align:center;
   color:#aaa;
+  font-size:14px;
 }
 
 /* ===============================
    MOBILE
 ================================ */
 @media(max-width:768px){
-  .company-name{
-    font-size:28px;
+
+  .topbar{
+    padding:12px 20px;
   }
 
   .hero-logo{
     width:var(--hero-logo-mobile);
   }
 
-  .hero-stats{
-    flex-direction:column;
-    gap:20px;
+  .company-name{
+    font-size:30px;
+    letter-spacing:1.5px;
   }
 
-  .contact-section{
-    grid-template-columns:1fr;
+  .company-tagline{
+    font-size:16px;
+  }
+
+  .hero-desc{
+    font-size:16px;
+  }
+
+  .hero-stats{
+    flex-direction:column;
+    gap:24px;
   }
 }
