@@ -25,12 +25,9 @@
   <div class="overlay"></div>
 
   <div class="hero-inner">
-
     <div class="hero-brand">
       <img src="logo.png" class="hero-logo" alt="Company Logo">
-
       <h1 class="company-name">M/S SWASTIK ENTERPRISES</h1>
-
       <p class="company-tagline">
         Reliable Industrial Lubricant Manufacturing
       </p>
@@ -59,7 +56,6 @@
         <span>Direct Supply</span>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -91,17 +87,20 @@
   <form id="appointmentForm" class="contact-form">
     <h3>Book a Factory Appointment</h3>
 
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="text" id="company" placeholder="Company Name">
-    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <!-- ✅ name attributes ADDED -->
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-    <select id="requirement">
+    <input type="text" id="company" name="company" placeholder="Company Name">
+
+    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+
+    <select id="requirement" name="requirement">
       <option>Bulk Purchase</option>
       <option>Factory Visit</option>
       <option>Private Label Manufacturing</option>
     </select>
 
-    <textarea id="message" placeholder="Your Requirements"></textarea>
+    <textarea id="message" name="message" placeholder="Your Requirements"></textarea>
 
     <button type="submit" class="btn primary">
       Schedule Appointment
