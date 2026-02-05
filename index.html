@@ -11,7 +11,7 @@
 <!-- NAVBAR -->
 <header class="topbar">
   <div class="nav-logo">
-    <img src="logo.png" alt="M/S Swastik Enterprises Logo">
+    <img src="logo.png" alt="Swastik Enterprises Logo">
   </div>
   <nav>
     <a href="#home">Home</a>
@@ -27,15 +27,18 @@
   <div class="hero-inner">
 
     <div class="hero-brand">
-      <img src="logo.png" class="hero-logo" alt="M/S Swastik Enterprises Logo">
+      <img src="logo.png" class="hero-logo" alt="Company Logo">
 
       <h1 class="company-name">M/S SWASTIK ENTERPRISES</h1>
-      <p class="company-tagline">Reliable Industrial Lubricant Manufacturing</p>
+
+      <p class="company-tagline">
+        Reliable Industrial Lubricant Manufacturing
+      </p>
     </div>
 
     <p class="hero-desc">
-      Factory-direct supply of high-quality lubricants for industrial,
-      fleet, and bulk buyers across India.
+      Factory-direct supply of high-quality lubricants for industrial, fleet,
+      and bulk buyers across India.
     </p>
 
     <div class="hero-buttons">
@@ -43,15 +46,15 @@
     </div>
 
     <div class="hero-stats">
-      <div class="stat">
+      <div>
         <strong>4+</strong>
         <span>Years Experience</span>
       </div>
-      <div class="stat">
+      <div>
         <strong>5 Lakh+</strong>
         <span>Liters / Year</span>
       </div>
-      <div class="stat">
+      <div>
         <strong>Factory</strong>
         <span>Direct Supply</span>
       </div>
@@ -60,9 +63,56 @@
   </div>
 </section>
 
+<!-- PRODUCTS -->
+<section id="products" class="dark-section">
+  <h2>Our Lubricant Range</h2>
+  <div class="grid">
+    <div class="card">Engine Oils</div>
+    <div class="card">Hydraulic Oils</div>
+    <div class="card">Gear Oils</div>
+    <div class="card">Industrial Greases</div>
+    <div class="card">Coolants</div>
+    <div class="card">Custom Blending</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-left">
+    <h2>Who We Work With</h2>
+    <ul>
+      <li>Transport & Fleet Owners</li>
+      <li>Industrial Manufacturing Units</li>
+      <li>Automobile Workshops</li>
+      <li>Private Label Brands</li>
+    </ul>
+  </div>
+
+  <form id="appointmentForm" class="contact-form">
+    <h3>Book a Factory Appointment</h3>
+
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="company" placeholder="Company Name">
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+
+    <select id="requirement">
+      <option>Bulk Purchase</option>
+      <option>Factory Visit</option>
+      <option>Private Label Manufacturing</option>
+    </select>
+
+    <textarea id="message" placeholder="Your Requirements"></textarea>
+
+    <button type="submit" class="btn primary">
+      Schedule Appointment
+    </button>
+  </form>
+</section>
+
 <footer>
   © 2026 M/S Swastik Enterprises. All Rights Reserved.
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
