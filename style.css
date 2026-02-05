@@ -1,16 +1,9 @@
-/* ===============================
-   ROOT VARIABLES
-================================ */
+/* ROOT VARIABLES (LOGO SIZE CONTROL) */
 :root{
-  --brand:#f37021;
-  --bg-dark:#000;
-
-  --hero-logo-desktop:210px;
-  --hero-logo-mobile:115px;
-  --nav-logo-height:46px;
+  --logo-size-desktop:220px;   
+  --logo-size-mobile:90px;
 }
 
-/* RESET */
 *{
   margin:0;
   padding:0;
@@ -23,11 +16,9 @@ body{
   color:#fff;
 }
 
-/* ===============================
-   NAVBAR
-================================ */
+/* NAVBAR */
 .topbar{
-  background:var(--bg-dark);
+  background:#000;
   padding:14px 40px;
   display:flex;
   justify-content:space-between;
@@ -35,21 +26,17 @@ body{
 }
 
 .nav-logo img{
-  height:var(--nav-logo-height);
-  width:auto;
+  height:40px;
 }
 
 nav a{
   color:#fff;
-  margin-left:28px;
+  margin-left:25px;
   text-decoration:none;
   font-weight:500;
-  font-size:15px;
 }
 
-/* ===============================
-   HERO
-================================ */
+/* HERO */
 .hero{
   position:relative;
   min-height:100vh;
@@ -59,90 +46,152 @@ nav a{
 .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.78);
+  background:rgba(0,0,0,0.75);
 }
 
 .hero-inner{
   position:relative;
   max-width:1100px;
   margin:auto;
-  padding:130px 20px;
+  padding:120px 20px;
   text-align:center;
 }
 
 /* BRAND BLOCK */
 .hero-brand{
-  margin-bottom:28px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom:25px;
 }
 
+/* 🔥 LOGO SIZE CONTROL */
 .hero-logo{
-  width:var(--hero-logo-desktop);
+  width:var(--logo-size-desktop);
+  max-width:45vw;
   height:auto;
-  margin-bottom:22px;
+  margin-bottom:15px;
 }
 
-/* TEXT FIXES */
+/* COMPANY NAME */
 .company-name{
-  font-size:48px;
+  font-size:46px;
   font-weight:800;
-  letter-spacing:3px;
-  color:var(--brand);
-  margin-bottom:14px;
+  letter-spacing:2px;
+  color:#f37021;
+  margin-bottom:10px;
 }
 
 .company-tagline{
-  font-size:19px;
-  color:#ccc;
-  line-height:1.6;
-}
-
-/* DESCRIPTION */
-.hero-desc{
   font-size:18px;
-  line-height:1.7;
-  color:#ddd;
-  max-width:780px;
-  margin:30px auto 40px;
+  color:#ccc;
 }
 
-/* BUTTON */
+/* HERO TEXT */
+.hero-desc{
+  font-size:17px;
+  color:#ddd;
+  max-width:800px;
+  margin:20px auto 35px;
+}
+
+.hero-buttons{
+  margin-bottom:40px;
+}
+
 .btn{
-  padding:15px 36px;
+  padding:14px 30px;
   border-radius:4px;
   text-decoration:none;
   font-weight:bold;
   display:inline-block;
-  transition:0.3s;
+  transition:all 0.3s ease;
 }
 
 .primary{
-  background:var(--brand);
+  background:#f37021;
   color:#fff;
 }
 
 .btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 12px 24px rgba(0,0,0,0.45);
+  box-shadow:0 10px 20px rgba(0,0,0,0.4);
 }
 
 /* STATS */
 .hero-stats{
   display:flex;
   justify-content:center;
-  gap:60px;
-  margin-top:50px;
+  gap:50px;
 }
 
-.stat strong{
-  font-size:30px;
-  color:var(--brand);
+.hero-stats strong{
+  font-size:28px;
+  color:#f37021;
 }
 
-.stat span{
+.hero-stats span{
   display:block;
-  margin-top:6px;
-  font-size:15px;
+  font-size:14px;
   color:#ccc;
+}
+
+/* SECTIONS */
+.dark-section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.dark-section h2{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#1c1c1c;
+  padding:40px 20px;
+  text-align:center;
+  border:1px solid #333;
+  transition:all 0.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:#f37021;
+}
+
+/* CONTACT */
+.contact-section{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.contact-form{
+  background:#fff;
+  color:#000;
+  padding:30px;
+  border-radius:6px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  padding:12px;
+  border:1px solid #ccc;
 }
 
 /* FOOTER */
@@ -151,37 +200,25 @@ footer{
   padding:20px;
   text-align:center;
   color:#aaa;
-  font-size:14px;
 }
 
-/* ===============================
-   MOBILE
-================================ */
+/* MOBILE */
 @media(max-width:768px){
-
-  .topbar{
-    padding:12px 20px;
+  .company-name{
+    font-size:28px;
+    text-align:center;
   }
 
   .hero-logo{
-    width:var(--hero-logo-mobile);
-  }
-
-  .company-name{
-    font-size:30px;
-    letter-spacing:1.5px;
-  }
-
-  .company-tagline{
-    font-size:16px;
-  }
-
-  .hero-desc{
-    font-size:16px;
+    width:var(--logo-size-mobile);
   }
 
   .hero-stats{
     flex-direction:column;
-    gap:24px;
+    gap:20px;
+  }
+
+  .contact-section{
+    grid-template-columns:1fr;
   }
 }
